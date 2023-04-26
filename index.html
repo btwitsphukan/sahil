@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <style>
+        *{
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+        }
+        .header{
+            height: 210px;
+            background: linear-gradient(180deg,#181717 -20%,#0084ff);
+        }
+        .header img{
+            margin-left:90px; 
+            margin-top:22px; 
+            width: 100px;
+        }
+        .header h3{
+            margin-left:200px;
+            margin-top:-80px;
+            font-size: 20px; 
+            color:white;
+            background-color:none;
+            line-height: 2;
+        }
+        .header h4{
+            margin-left:200px;
+            font-size: 16px; 
+            color:white;
+            background-color:none;
+        }
+        .header h2{
+            margin-left:950px; 
+            margin-top:-55px;
+            font-size: 32px; 
+            color:rgb(255, 255, 255); 
+            background-color:none;
+        }
+
+/*------navbar styling-----------*/
+        .navbar{
+            width: 100%;
+            height: 50px;
+            margin-top: 65px;
+        }
+        .checkbtn{
+            color: #fff;
+            font-size: 25px;
+            cursor: pointer;
+            float: right;
+            padding-top: 14px;
+            padding-right: 10px;
+            display: none;
+        }
+        #check{
+            display: none;
+        }
+        .navbar ul{
+        display:flex;
+        align-items: right;
+        justify-content:right;
+        padding-right: 15px;
+        }
+        .navbar ul li{
+        list-style: none;
+        padding: 0px 15px;
+        padding-top: 16px;
+        }
+        .navbar ul li a{
+        color:rgb(255, 255, 255);
+        font-size: 20px;
+        text-decoration: none;
+        position: relative;
+        padding-bottom: 7px;
+    }
+    .navbar ul li a i{
+        font-size: 16px;
+    }
+    .navbar a::after{
+        position: absolute;
+        content:"";
+        bottom: 0;
+        left: 0;
+        width:0;
+        height: 4px;
+        border-radius: 3px;
+        background-color:rgb(238, 255, 0);
+        transition: width 0.4s ease-out;
+    }
+    .navbar ul li a:hover::after{
+        width: 100%;
+    }
+    .navbar ul li a:hover{
+        color:rgb(255, 251, 0) ;
+    }
+    .navbar ul li a.active{
+        color:rgb(255, 251, 0) ;
+        border-bottom: 4px solid rgb(255, 251, 0);
+        width: 100%;
+        border-radius: 3px;
+        transition: 0.5s ease;
+        padding-bottom: 4px;
+    }
+    /*---------about the dept styling----*/
+    .box1{
+        width: 100%;
+        height:430px;
+    }
+    .slider{
+        width: 62%;
+        height: 420px;
+        float: right;
+        margin-left: 10px;
+        margin-right: 5px;
+        margin-top: 10px;
+        border-radius: 5px;
+        background-image: url(db2.jpg);
+        background-size: 100% 100%;
+        animation: changeimage 20s linear infinite;
+    }
+    @keyframes changeimage {
+        0%{
+           background-image: url(db2.jpg); 
+        }
+        25%{
+           background-image: url(db3.jpg); 
+        }
+        50%{
+           background-image: url(db1.jpg); 
+        }
+        75%{
+           background-image: url(db2.jpg); 
+        }
+        100%{
+           background-image: url(db3.jpg); 
+        }
+        0%{
+           background-image: url(db2.jpg); 
+        }
+        
+    }
+    .box1 h1{
+        text-align: center;
+        padding: 25px 45px;
+        font-size: 34px;
+        font-weight: 540;
+    }
+    .visible-contant p{
+        padding-left: 50px;
+        line-height: 2;
+        padding-right: 10px;
+        font-size: 20px;
+    }
+    .visible-contant a{
+        text-decoration: none;
+        padding-left: 50px;
+        line-height: 2;
+        color: #45da00;
+        font-weight: 600;
+        font-size: 20px;
+    } 
+    .visible-contant a:hover{
+        font-size: 24px;
+        transition: .5s;
+    }
+    
+/*----------row styling--------*/
+.row{
+        height:310px;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        margin-top: 10px;
+        display: flex;
+    }
+    .row1{
+        height: 288px;
+        width: 33.3%;
+        background-color: rgb(255, 255, 255);
+        margin-top: 10px; 
+    }
+    .row1 h3{
+        padding-top: 15px;
+        padding-left:15px;
+        font-size: 26px;
+        color: #005cb3;
+    }
+    .row1 p{
+        padding-left:15px;
+        padding-right: 15px;
+        padding-top: 20px;
+        line-height: 2;
+    }
+    .row1 p a:hover{
+        font-size: 18px;
+        transition: .5s;
+    }
+    .row1 a{
+         text-decoration: none;
+         background-color: #45da00;
+         padding:6px 8px;
+         text-align: center;
+         border-radius: 5px;
+         color: #0026ff;
+    }
+    .row2{
+        height: 288px;
+        width: 33%;
+        background-color: rgb(255, 255, 255);    
+        margin-top: 10px; 
+    }
+    .row2 h3{
+        padding-top: 15px;
+        padding-left: 15px;
+        font-size: 26px;
+        color: #005cb3;
+    }
+    .row2 p{
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-top: 20px;
+        line-height: 2;
+    }
+    .row3{
+        height: 288px;
+        width: 33.3%;
+        background-color:white;
+        margin-top: 10px;  
+        background-image: url(db2.jpg);
+        background-size: 100% 100%;
+    }
+    .row3 h3{
+        padding-top: 15px;
+        padding-left: 55px;
+        font-size: 26px;
+        height: 55px;
+        color: #00ff88;
+        background-color: rgba(13, 0, 255, 0.5);
+    }
+/*----section4 about the chairperson styling-------*/
+    .md{
+        width: 100%;
+        height: 550px;
+        margin-top: 40px;
+    }
+    .image{
+        width: 650px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        clip-path: circle();
+        background-size: 100% 100%;
+    }
+    .name{
+        width: 100%;
+        text-align: center;
+        padding-top: 16px;
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+    .cd{
+        padding-top: 30px;
+        padding-left: 130px;
+        padding-right: 130px;
+        line-height: 2;
+        font-size: 16px;
+    }
+    .cd a{
+        text-decoration: none;
+        background-color: #45da00;
+        padding:6px 8px;
+        text-align: center;
+        border-radius: 5px;
+    }
+    .cd p a:hover{
+            font-size: 18px;
+            transition: .5s;
+        }
+/*---------section5---------*/
+    .md1{
+        width: 100%;
+        background-color: #001368;
+        height: 210px; 
+        margin-top: 30px;  
+    }
+    .md-sub1{
+        width: 10%;
+        height: 180px;
+        padding-top: 40px;
+        padding-left: 20%;
+    }
+    .md-sub1 i{
+        font-size: 90px;
+        padding-left: 50%;
+        color: #00ff88;
+        cursor: pointer;
+    }
+    .md-sub1 i:hover{
+        font-size: 100px;
+        padding-left: 48%;
+        color: #fff;
+        transition: .5s;
+    }
+    .md-sub1 h3{
+        color: #fff;
+        padding-left: 50%;
+        line-height: 2;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    .md-sub1 h3:hover{
+        color: #00ff88;
+        font-size: 20px;
+        padding-left: 55%;
+        transition: .5s;
+    }
+/*-----------section5------------*/
+    .container-my-1{
+        width: 100%;
+        height: 400px;
+
+    }
+    .container-my-1 section{
+        width: 100%;
+        height: 50px;
+        background-color: #21d192;
+
+    }
+    .dir{
+        display: flex;
+    }
+    .left-text{
+        width: 50%;
+        height: 300px;
+    }
+    .left-text-1{
+        padding-top: 30px;
+        padding-left: 90px;
+        font-size: 22px;
+        font-weight: 600;
+    }
+    .left-text-2{
+        padding-top: 90px;
+        padding-left: 90px;
+        line-height: 1.5;
+        font-size: 16px;
+    }
+    .right-text{
+        width: 50%;
+        height: 300px;
+        float: right;
+
+    }
+    .last{
+        width: 100%;
+        height: 50px;
+        background-color:rgba(0, 0, 0, 0.8);
+        margin-top: 0px;
+    }
+ /*----==========design for modal form=======-------*/
+        .overlay{
+            width: 100%;
+            height: 100vh;
+            top: 0%;
+            background: rgba(0,0,0,.9);
+            z-index: -1;
+            position: fixed;
+            opacity: 0;
+            transition: 1s;
+        }
+        .showoverlay{
+            opacity: 1;
+            z-index: 1;
+        }
+        .login-form{
+            width: 340px;
+            background-color:#ffffff;
+            padding: 40px 30px;
+            height: 440px;
+            border-radius: 10px;
+            position: absolute;
+            left: 50%;
+            top: -50%;
+            transform: translate(-50%,-50%);
+            box-shadow: 0 0 15px #ffffff;
+            z-index: 9;
+            transition: 1s;
+            border: 1px solid black;
+        }
+        .showlogin-form{
+            top: 50%;
+        }
+        .login-form h2{
+            text-align: center;
+            color: #222;
+            margin: 8px 0px 25px;
+            font-size: 28px;
+        }
+        .login-form input{
+            width: 90%;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid black;
+            margin-bottom: 16px;
+            padding-left: 14px;
+            margin-top: 14px;
+            display: block;
+
+        }
+        .login-form label{
+            font-size: 22px;
+        }
+        .login-form ::placeholder{
+            padding: 8px;
+            font-size: 15px;
+        }
+        .login-form button{
+            background-color: #111;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 12px;
+            margin-left: 30%;
+            cursor: pointer;
+            font-size: 18px;
+            border: none;
+        }
+        .login-form button:hover{
+            background-color:#1a73e8;
+            color: #111;
+        }
+        .login-form a{
+           float: right;
+           text-decoration: none;
+           padding-top: 10px;
+           font-size: 18px;
+        }
+        .login-form span{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            cursor: pointer;
+            background-color: grey;
+            border-radius: 20px;
+            font-size: 25px;
+        }
+        .login-form span:hover{
+            color: red;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+            border-radius: 25px;
+            font-size: 30px;
+        }
+/*---------select option part-----*/
+    .option{
+        width: 100%;
+        height: 20%;
+        margin-left: 14px;
+    }
+   .option li{
+        width: 35%;
+        height: 40px;
+        display:flex;
+        box-sizing: border-box;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding-left: 8px;
+    }
+    .option li a{
+        color: #111;
+        font-size: 18px;
+    }
+    .dropdown{
+        display: none;
+    }
+    li:hover .dropdown{
+        display: block;
+        position: absolute;
+        left: 45px;
+        background-color: #fffefe;
+        border-radius: 4px;
+        margin-top: 38px;
+        border: 1.5px solid black;
+    }
+ .dropdown ul{
+        display: block;
+        width: 90px;
+        height: 90px;
+        margin: 3px;
+    }
+     .dropdown ul li{
+        padding-top: 6px;
+        line-height: 1;
+        border: none;
+    }
+    .dropdown ul li a{
+        border-bottom: none;
+    }
+    .dropdown ul li:hover{
+        background-color: #0011ff;
+        width: 100%;
+        text-align: center;
+    }
+/*-----============user login=======-----*/
+    .over{
+            width: 100%;
+            height: 100vh;
+            top: 0%;
+            background: rgba(0,0,0,0.9);
+            z-index: -1;
+            position: fixed;
+            opacity: 0;
+            transition: 1s;
+        }
+        .showover{
+            z-index: 2;
+            opacity: 2;
+        }
+        .login{
+            width: 340px;
+            background-color:#ffffff;
+            padding: 40px 30px;
+            height: 460px;
+            border-radius: 10px;
+            position: absolute;
+            left: -50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            border: 1px solid black;
+            transition: 1.3s;
+            z-index: 5;
+        }
+        .showlogin{
+            left: 50%;
+        }
+        .login h2{
+            text-align: center;
+            color: #222;
+            margin: 8px 0px 25px;
+            font-size: 28px;
+        }
+        .login input{
+            width: 90%;
+            height: 35px;
+            border-radius: 5px;
+            border: 1px solid black;
+            margin-bottom: 16px;
+            padding-left: 14px;
+            margin-top: 14px;
+            display: block;
+
+        }
+        .login label{
+            font-size: 22px;
+        }
+        .login ::placeholder{
+            padding: 8px;
+            font-size: 15px;
+        }
+        .login button{
+            background-color: #111;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 12px;
+            margin-left: 30%;
+            cursor: pointer;
+            font-size: 18px;
+            border: none;
+        }
+        .login button:hover{
+            background-color:#0011ff;
+            color: #111;
+        }
+        .login a{
+           float: right;
+           text-decoration: none;
+           padding-top: 10px;
+           font-size: 18px;
+        }
+        .login span{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            cursor: pointer;
+            background-color: grey;
+            border-radius: 20px;
+            font-size: 25px;
+        }
+        .login span:hover{
+            color: red;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+            border-radius: 25px;
+            font-size: 30px;
+        }
+
+
+/*----------large screen-----------*/
+        @media (max-width: 1024px){
+            .header{
+                width:auto;
+                height: auto;
+            }
+            .header img{
+                margin-left: 50%;
+                width: 80px;
+            }
+            .header h3{
+                margin-left: 34%;
+                margin-top: 0px;
+                font-size: 18px;
+            }
+            .header h4{
+                margin-left: 45%;
+                font-size: 16px;
+            }
+            .header h2{
+                margin-left: 40%;
+                font-size: 28px;
+                margin-top: 15px;
+            }
+            .md{
+                width: auto;
+                height: auto;
+                background-color: #00ff88;
+            }
+            .md .image{
+                width: 50%;
+            }
+            .md .name{
+                font-size: 22px;
+            }
+            .md .cd{
+                height: auto;
+            }
+            .md .cd p{
+                width: auto;
+                margin-left: -110px;
+                font-size: 18px;
+            }
+            .md .cd p a{
+                font-size: 16px;
+            }
+            .md .cd p a:hover{
+                font-size: 18px;
+                background-color: blueviolet;
+            }
+            .md1{
+                width: auto;
+                height: auto;
+                margin-top: 0;
+            }
+            .container-my-1{
+                width: auto;
+                height: auto;
+            }
+            .container-my-1 .dir{
+                flex-direction: column;
+            }
+            .left-text{
+                width: auto; 
+                margin-left: -50px;
+            }
+            .right-text{
+                width: auto;
+                margin-left: -150px;
+            }
+            .right-text .google-map{
+                width: auto;
+                height: auto;
+            }
+            .row{
+                width: auto;
+                height: auto;
+            }
+            .row .row1,.row2 p{
+                font-size: 14px;;
+            }
+            
+        }
+/*---------------tab screen----------*/
+        @media (max-width: 768px) {
+            .header{
+                width:auto;
+                height: auto;
+            }
+            .header img{
+                margin-left: 50%;
+                width: 80px;
+            }
+            .header h3{
+                margin-left: 33%;
+                margin-top: 0px;
+                font-size: 16px;
+            }
+            .header h4{
+                margin-left: 43%;
+                font-size: 14px;
+            }
+            .header h2{
+                margin-left: 38%;
+                font-size: 26px;
+                margin-top: 15px;
+            }
+            /*---responsive navbar---*/
+            .navbar{
+               margin-top :10px;
+            }
+            .checkbtn{
+                display:block;
+                margin-top: -20px;
+                margin-right: 20px;
+            }
+            .navbar ul{
+                width: 100%;
+                height: 58vh;
+                position: fixed;
+                background-color: #000000;
+                margin-top: 20px;
+                left:-250%;
+                display: block;
+                text-align: center;
+                line-height: 1.8;
+                transition: .8s;
+            }
+            .navbar ul li a{
+                font-size: 18px;
+            }
+            #check:checked ~ ul{
+                left: 0;
+            }
+            .box1 .slider{
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column-reverse;
+                background-size: 100% 100%;
+                border-radius: 0px;
+            }
+            .box1 h1{
+                width:auto;
+                padding: 20px 10px; 
+                display: flex;  
+            }
+            .box1 .visible-contant p{
+                padding-left: 10px;
+                font-size: 20px;
+            }
+            .box1 .visible-contant a{
+                padding-left: 10px;
+                font-size: 20px;
+            }
+            .box1 .visible-contant a:hover{
+                font-size: 24px;
+                color: #0026ff;
+                transition: .5s;
+            }
+            .box1 .visible-contant a i:hover{
+                font-size: 24px;
+                color: #0026ff;
+                transition: .5s;
+            }
+            .row{
+                flex-direction: column-reverse;
+                margin-top: 750px;
+            }
+            .row .row1,.row2,.row3{
+                width: auto;
+                height:auto;
+            }
+            .md{
+                width: auto;
+                height: auto;
+                background-color: #00ff88;
+                margin-bottom: 0;
+            }
+            .md .image{
+                width: 75%;
+            }
+            .md .name{
+                font-size: 22px;
+            }
+            .md .cd{
+                height: auto;
+            }
+            .md .cd p{
+                width: auto;
+                margin-left: -110px;
+                font-size: 18px;
+            }
+            .md .cd p a{
+                font-size: 16px;
+            }
+            .md .cd p a:hover{
+                font-size: 18px;
+                background-color: blueviolet;
+            }
+            .md1{
+                width: auto;
+                height: auto;
+                margin-top: 0;
+            }
+            .container-my-1{
+                width: auto;
+                height: auto;
+            }
+            .container-my-1 .dir{
+                flex-direction: column;
+            }
+            .left-text{
+                width: auto; 
+                margin-left: -50px;
+            }
+            .right-text{
+                width: auto;
+                margin-left: -150px;
+            }
+            .right-text .google-map{
+                width: 700px;
+                height: auto;
+                padding-top: 20px;
+            }
+            
+            
+        }
+/*--------------phone screen----------------*/
+         @media (max-width: 480px){
+            .header{
+                width:auto;
+                height: auto;
+            }
+            .header img{
+                margin-left: 50%;
+                width: 70px;
+            }
+            .header h3{
+                margin-left: 22%;
+                margin-top: 0px;
+                font-size: 16px;
+            }
+            .header h4{
+                margin-left: 38%;
+                font-size: 14px;
+            }
+            .header h2{
+                margin-left: 32%;
+                font-size: 24px;
+                margin-top: 15px;
+            }
+            /*---responsive navbar---*/
+            .navbar{
+               margin-top :10px;
+            }
+            .checkbtn{
+                display:block;
+                margin-top: -20px;
+                margin-right: 20px;
+            }
+            .navbar ul{
+                width: 100%;
+                height: 62vh;
+                position: fixed;
+                background-color: #000000;
+                margin-top: 20px;
+                left:-250%;
+                display: block;
+                line-height: 1.8;
+                transition: .8s;
+            }
+            .navbar ul li a{
+                font-size: 18px;
+            }
+            #check:checked ~ ul{
+                left: 0;
+                right:auto;
+            }
+            .box1 .slider{
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column-reverse;
+                background-size: 100% 100%;
+                border-radius: 0px;
+            }
+            .box1 h1{
+                width:auto;
+                padding: 20px 10px; 
+                display: flex;  
+            }
+            .box1 .visible-contant p{
+                padding-left: 10px;
+                font-size: 20px;
+            }
+            .box1 .visible-contant a{
+                padding-left: 10px;
+                font-size: 20px;
+            }
+            .box1 .visible-contant a:hover{
+                font-size: 24px;
+                color: #0026ff;
+                transition: .5s;
+            }
+            .box1 .visible-contant a i:hover{
+                font-size: 24px;
+                color: #0026ff;
+                transition: .5s;
+            }
+            .row{
+                flex-direction: column-reverse;
+                margin-top: 0px;
+            }
+            .row .row1,.row2{
+                width: auto;
+                height:auto;
+            }
+            .row .row3{
+                width: auto;
+                height: auto;
+            }
+            .md{
+                width: auto;
+                height: auto;
+                background-color: #00ff88;
+                margin-bottom: 0;
+            }
+            .md .image{
+                width: 75%;
+            }
+            .md .name{
+                font-size: 22px;
+            }
+            .md .cd{
+                height: auto;
+            }
+            .md .cd p{
+                width: auto;
+                margin-left: -60px;
+                font-size: 18px;
+            }
+            .md .cd p a{
+                font-size: 16px;
+            }
+            .md .cd p a:hover{
+                font-size: 18px;
+                background-color: blueviolet;
+            }
+            .md1{
+                width: auto;
+                height: auto;
+                margin-top: 0;
+            }
+            .container-my-1 .dir{
+                flex-direction: column;
+            }
+            .left-text{
+                width: auto; 
+                margin-left: -50px;
+            }
+            .right-text{
+                width: auto;
+                margin-left: -150px;
+            }
+            .right-text .google-map{
+                width: 650px;
+                height: auto;
+            }
+           
+            
+         }
+
+    </style>
+</head>
+<body>
+<!----=================section1===================-->
+    <!---Name of the department----->
+    <div class="header">
+        <a href="https://dibru.ac.in" target="dibru"><img src="duLogo1.jpg"></a>
+        <h3>Dibrugarh University | ডিব্ৰুগড় বিশ্ববিদ্যালয়</h3>
+        <h4>Accredited 'A' Grade by NAAC</h4>
+        <h2>Department of Boro</h2>
+        <!--------navbar--------->
+        <div class="navbar">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+            <li ><a class="active" href="home.html" target="_self">Home</a></li>
+            <li><a  href="about.html" target="_self">About</a></li>
+            <li><a href="courses.html" target="_self" >Courses</a></li>
+            <li><a href="">People <i class="fa fa-caret-down"></i></a>  </li>
+            <li><a href="#">Admission <i class="fa fa-care t-down"></i></a></li>
+            <li onclick="showmodal()"><a href="#">Login</a></li>
+            <li><a href="contact.html" target="_self">Contact us</a></li>
+            </ul>
+        </div>
+    </div>
+<!----=================section2===================-->
+    <!--=======About the department----------->
+    <div class="box1">
+        <!-----Photos of the department----->
+        <div class="slider">
+        </div>    
+        <!----Name of the department----->
+            <h1> Welcome to Department of Boro</h1>
+            <div class="visible-contant">  
+        <!-----few lines about the department---->
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus sed eveniet error vel est! Totam explicabo dignissimos rem laboriosam delectus odio? Doloribus vitae neque animi porro quisquam nostrum perferendis sed.</p>
+                <a href="about.html">Read more <i class="fa-solid fa-arrow-right" style="color:#45da00"></i></a>  <!----it will go to about page-->
+            </div>    
+    </div>
+<!----=================section3===================-->
+    <div class="row">
+        <div class="row1">
+            <h3><i class="fa-solid fa-chevron-right fa-2xs" style="width: 22px;height: 10px;text-align: center; font-size: 14px; padding-top: 12px;border-radius: 20px; background-color: #0026ff; color: #fff;"></i> &nbsp;&nbsp; About the University <hr
+                style="width: 70px;background-color:#7c4dff; height: 2px; margin-left: 310px;"></h3>
+            <!---few lines about the university----->
+            <p> Dibrugarh University, the easternmost University in India, was established in 1965 consequent upon the provisions of the Dibrugarh University Act, 1965, enacted by the Assam Legislative Assembly. It is a leading research and innovation driven University that acts as a spatial slot to configure the socio-cultural dynamics of North East India.The University encourages myriad &nbsp;<br><a href="https://dibru.ac.in/about-us/" target="_blank" >Read more <i class="fa-solid fa-arrow-right"></i> </a>  
+            </p>
+        </div> 
+        <!----news & event section====---->
+        <div class="row2">
+            <h3><i class="fa-solid fa-chevron-right fa-2xs" style="width: 22px;height: 10px;text-align: center; font-size: 14px; padding-top: 12px;border-radius: 20px; background-color: #0026ff; color: #fff;"></i> &nbsp;&nbsp; News & Events  <hr style="width: 110px;background-color:#7c4dff; height: 2px; margin-left: 250px;"></h3> 
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eligendi accusamus reprehenderit doloremque ex commodi temporibus dolorem fugiat nesciunt, optio repellendus in, nulla quo! Quos rem eos vitae dignissimos sequi?</p>
+        </div> 
+        <!---notice section---->
+        <div class="row3"> 
+            <h3><i class="fa-solid fa-bell" style="width: 24px;height: 18px;text-align: center; font-size: 14px; padding-top: 6px;border-radius: 20px; background-color: #00ff88;color: #000000;"></i> &nbsp;&nbsp; Notification</h3>
+            <marquee scrolldelay="200" direction="up" onmouseover="this.stop();" onmouseout="this.start();" style=" width: 100%;  height: 218px; background-color: rgba(17, 0, 255, 0.5); ">
+                <a style="padding-left: 110px; text-decoration: none; color: #ffffff;line-height:3;font-size: 18px;" href="">Admission Notice</a><br><hr style="width:76%; margin-left: 110px;">
+                <a style="padding-left: 110px; text-decoration: none; color: #ffffff;line-height:3;font-size: 18px;" href="">Admission Notice</a><br><hr style="width:76%; margin-left: 110px;">
+                <a style="padding-left: 110px; text-decoration: none; color: #ffffff;line-height:3; font-size: 18px;" href="">Admission Notice</a><br><hr style="width:76%; margin-left: 110px;">
+                <a style="padding-left: 110px; text-decoration: none; color: #ffffff;line-height:3; font-size: 18px;" href="">Admission Notice</a><br><hr style="width:76%; margin-left: 110px;">
+                <a style="padding-left: 110px; text-decoration: none; color: #ffffff;line-height:3; font-size: 18px;" href="">Admission Notice</a><br><hr style="width:76%; margin-left: 110px;">
+            </marquee>
+        </div>
+   </div>
+<!----=================section4===================-->
+   <!--=====about the chairperson====-->
+   <div class="md">
+        <img src="db2.jpg" class="image" alt="image">
+        <div class="name">Name of the chairperson</div>
+        <div class="cd">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis voluptate aliquid quasi natus iusto odio. Consequatur enim commodi dicta quis sed, nostrum atque fuga. Architecto vel ab soluta corrupti debitis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eaque, vel ab porro, fuga maiores inventore alias soluta earum nam mollitia recusandae quod distinctio. Id quidem itaque adipisci commodi beatae! <br><a href="chairperson.html">Read more <i class="fa-solid fa-arrow-right"></i> </a> </p>
+        </div>
+   </div>
+
+<!---================section5===================-->
+   <div class="md1">
+        <div class="md-sub1">
+            <i class="fa-solid fa-image"> </i> 
+               <h3>Gallery</h3>
+              
+        </div>
+
+   </div>
+<!----==========footer section=============-->
+<!---footer--->
+   <div class="container-my-1">
+    <!---footer head---->
+        <section></section>
+        <!---left-->
+    <div class="dir">
+        <div class="left-text">
+            <!----left 1--> 
+            <div class="left-text-1">
+                © DEPARTMENT OF BORO,<BR>&nbsp; &nbsp; DIBRUGARH UNIVERSITY  <hr
+                    style="width: 60px;background-color:#7c4dff; height: 2px; padding-left: 80px; margin-left: 310px;">
+            </div>
+            <!----left 2-->
+            <div class="left-text-2">
+                (Website is in the Developing Phase) <br>
+                Developed By: Sahil Phukan  <br>
+                (Under the Guidance of Faculty Members of CCSADU)
+            </div>
+        </div>
+        <!----right-->
+        <div class="right-text">
+            <!----right1---->
+            <div class="right-text-1">
+                <h3 style="margin-top: 44px; font-size: 26px; padding-left: 180px;">Contact  <hr style="width: 60px;background-color:#7c4dff; height: 2px; padding-left: 80px; margin-left: 110px;"></h3>
+            </div>
+            <!---right2---->
+            <div class="right-text-2" style="padding-top: 30px; padding-left: 180px;">
+                <p><i class="fas fa-home mr-3"></i>&nbsp; Dibrugarh University, Assam, Pin: 786004</p> <br>
+                <p><i class="fas fa-envelope mr-3"></i>&nbsp;  info@example.com</p> <br>
+                <p><i class="fas fa-phone mr-3"></i>&nbsp;  + 91 234 567 88</p> <br>
+                <p><i class="fas fa-print mr-3"></i>&nbsp;  + 91 234 567 89</p> <br>
+                <p><i class="fas fa-location-dot mr-3"></i>&nbsp;  Location</p>
+            </div>
+            <!---map---->
+            <div class="google-map" style="margin-top: -20%;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.6347489296704!2d94.89566761505645!3d27.44949158289941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3740a2daaaaaaaab%3A0x3c0d978a22c76583!2sDibrugarh%20University!5e0!3m2!1sen!2sin!4v1681055758597!5m2!1sen!2sin" width="310" height="163" style="border:0; float: right; border: 1px solid;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div></div>
+        <!----footer bottom-->
+        <div class="last"></div>
+   </div>
+<!----footer ends-->
+<!-----========section 5 ends=======-->
+    <!-----========login modal form----------->
+
+    <div class="overlay"></div>
+    <div class="login-form">
+        <span onclick="closemodal()">&times;</span>
+        <form action="" onsubmit="sendEmail(); reset(); return false;">
+            <h2> Admin Login</h2>
+            <hr style="background-color: darkviolet; height: 2px; margin-bottom: 26px;">
+             <!-----------select option-------->
+             <div class="option">
+                <li><a href="">Admin &nbsp;<i class="fa fa-caret-down"></i></a>
+                    <!----drop down menu-->
+                        <div class="dropdown">
+                            <ul>
+                                <li onclick="show(),closemodal()"><a href="#">Teacher</a></li><hr>
+                                <li onclick="show(),closemodal()"><a href="#">Student</a></li>
+                            </ul>
+                        </div>
+                    </li>
+        </div>
+        <br>
+        <!------admin form layout-------->
+            <div>
+                <label for="">Phone Number</label>
+                <input type="number" name="name" placeholder="Enter your phone number" required>
+            </div>
+            <div>
+                <label for="">Password</label>
+                <input type="password" name="pw" placeholder="Enter your password" required>
+            </div>
+            <button name="login">Login</button> <br>
+            <br>
+            <a href="">Forget password</a>
+        </form>
+    </div>
+<!--------------login modal endss--------------->
+<!--------teacher/student login form layout------>
+<div class="over"></div>
+<div class="login">
+    <span onclick="closem(),showmodal()">&times;</span>
+    <form action="" onsubmit="sendEmail(); reset(); return false;">
+        <h2> Login</h2>
+        <hr style="background-color: darkviolet; height: 2px; ">
+        <br>
+        <div>
+            <label for="">Username</label>
+            <input type="text" placeholder="Enter your Username" required>
+        </div>
+        <div>
+            <label for="">Phone Number</label>
+            <input type="number" placeholder="Enter your phone number" required>
+        </div>
+        <div>
+            <label for="">Password</label>
+            <input type="password" placeholder="Enter your password" required>
+        </div>
+        <button>Login</button> <br>
+        <br>
+        <a href="">Forget password</a>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+<!---========script for login pop up--------->
+    <script>
+        //for admin opening form 
+        function showmodal(){
+            document.querySelector('.overlay').classList.add('showoverlay')
+            document.querySelector('.login-form').classList.add('showlogin-form')
+        }
+        //for admin closing form
+        function closemodal(){
+            document.querySelector('.overlay').classList.remove('showoverlay')
+            document.querySelector('.login-form').classList.remove('showlogin-form')
+        }
+
+//for user form-------(teacher/student)--------------------
+        function show(){
+            document.querySelector('.over').classList.add('showover')
+            document.querySelector('.login').classList.add('showlogin')
+        }
+        //for closing the form
+        function closem(){
+            document.querySelector('.over').classList.remove('showover')
+            document.querySelector('.login').classList.remove('showlogin')
+        }
+    </script>
+   
+</body>
+</html>
